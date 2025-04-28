@@ -1,5 +1,8 @@
 class Menu < ApplicationRecord
-  has_many :menu_items, dependent: :destroy
+  belongs_to :restaurant
+
+  has_many :menu_listings
+  has_many :menu_items, through: :menu_listings
 
   validates :name, presence: true
 
