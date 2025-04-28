@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   namespace :api do
-    resources :menu, only: [:index, :show] do
-      resources :menu_items, only: [:index, :show]
+    resources :restaurants, only: [:index, :show] do
+      resources :menus, only: [:index, :show] do
+        resources :menu_items, only: [:index, :show]
+      end
     end
   end
 end
