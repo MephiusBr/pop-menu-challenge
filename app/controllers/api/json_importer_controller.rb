@@ -7,7 +7,6 @@ class Api::JsonImporterController < ApplicationController
     JsonImporterService.new(params[:file]).call
     head :ok
   rescue => e
-    byebug
     render json: { message: e.message }, status: :bad_request
   end
 end
