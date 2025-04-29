@@ -13,5 +13,7 @@ Rails.application.routes.draw do
         resources :menu_items, only: [:index, :show]
       end
     end
+
+    post "/json-importer", to: "json_importer#import"
   end
 end
