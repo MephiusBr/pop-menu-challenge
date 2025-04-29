@@ -3,4 +3,4 @@
 ```git clone https://github.com/MephiusBr/pop-menu-challenge```
 
 # Instructions
-```cd pop-menu-challenge && rspec -f d spec```
+```cd pop-menu-challenge && bundle && rspec -f d spec```
